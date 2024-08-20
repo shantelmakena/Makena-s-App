@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1085203884796",
+    "project_id": "makena-s-app",
+    "storage_bucket": "makena-s-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1085203884796:android:4cfe06dad5f3da9d6d4579",
+        "android_client_info": {
+          "package_name": "com.example.makenasapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDox2NBP72bXqu0yQpLjP2rm2SQAP5V5Zg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
