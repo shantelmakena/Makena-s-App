@@ -36,6 +36,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.makenasapp.R
 import com.example.makenasapp.navigation.ROUT_HOME
+import com.example.makenasapp.navigation.ROUT_SIGNUP
 import com.example.makenasapp.ui.theme.HotPink
 
 
@@ -43,13 +44,13 @@ import com.example.makenasapp.ui.theme.HotPink
 fun HomeScreen(navController: NavController){
     Column(modifier = Modifier
         .fillMaxSize()
-        .background(HotPink),
+        .background(Color.Red),
        verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
 
         ) {
         Image(
-            painter = painterResource(id = R.drawable.home),
+            painter = painterResource(id = R.drawable.shopping2),
             contentDescription ="home",
             modifier = Modifier
                 .size(300.dp)
@@ -58,7 +59,7 @@ fun HomeScreen(navController: NavController){
         )
         Spacer(modifier = Modifier.height(40.dp))
         Text(
-            text ="Magic Bricks",
+            text ="ShoppyApp",
             fontSize = 30.sp,
             fontWeight = FontWeight.SemiBold,
             fontFamily = FontFamily.Cursive,
@@ -66,13 +67,13 @@ fun HomeScreen(navController: NavController){
 
         )
         Text(
-            text ="Your better choice",
+            text ="Shop with us at a fair price",
             fontSize = 10.sp
         )
 
         Spacer(modifier = Modifier.height(160.dp))
 
-        Button(onClick = {navController.navigate(ROUT_HOME) },
+        Button(onClick = {navController.navigate(ROUT_SIGNUP) },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(start = 20.dp, end = 20.dp)
