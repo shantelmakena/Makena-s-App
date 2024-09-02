@@ -36,15 +36,18 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.makenasapp.R
 import com.example.makenasapp.navigation.ROUT_HOME
+import com.example.makenasapp.navigation.ROUT_HOME1
 import com.example.makenasapp.navigation.ROUT_SIGNUP
 import com.example.makenasapp.ui.theme.HotPink
+import com.example.makenasapp.ui.theme.newRed
+import com.example.makenasapp.ui.theme.newRed1
 
 
 @Composable
 fun HomeScreen(navController: NavController){
     Column(modifier = Modifier
         .fillMaxSize()
-        .background(Color.Red),
+        .background(newRed1),
        verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
 
@@ -59,26 +62,36 @@ fun HomeScreen(navController: NavController){
         )
         Spacer(modifier = Modifier.height(40.dp))
         Text(
-            text ="ShoppyApp",
-            fontSize = 30.sp,
+            text ="Amazon",
+            fontSize = 60.sp,
             fontWeight = FontWeight.SemiBold,
             fontFamily = FontFamily.Cursive,
-            color = Color.Cyan,
+            color = Color.White,
 
         )
         Text(
             text ="Shop with us at a fair price",
-            fontSize = 10.sp
+            fontSize = 20.sp,
+            color = Color.White,
         )
+
+        Text(
+            text ="Manage your Amazon business on the go with Amazon Seller! Analyze your sales, fulfill orders, find products to sell, manage offers and inventory,",
+            fontSize = 20.sp,
+            color = Color.White,
+            modifier = Modifier.fillMaxWidth(),
+            textAlign = TextAlign.Center,
+        )
+
 
         Spacer(modifier = Modifier.height(160.dp))
 
-        Button(onClick = {navController.navigate(ROUT_SIGNUP) },
+        Button(onClick = {navController.navigate(ROUT_HOME1) },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(start = 20.dp, end = 20.dp)
                 .height(50.dp),
-            colors = ButtonDefaults.buttonColors(Color.Black),
+            colors = ButtonDefaults.buttonColors(newRed),
             shape = RoundedCornerShape(10.dp)
 
             ) {

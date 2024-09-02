@@ -32,17 +32,16 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.makenasapp.R
-import com.example.makenasapp.navigation.ROUT_HOME2
 import com.example.makenasapp.ui.theme.newRed
 import com.example.makenasapp.ui.theme.screens.home.HomeScreen
 
 @Composable
-fun Home1Screen(navController: NavController) {
+fun Home3Screen(navController: NavController) {
 
     Column(modifier = Modifier
         .fillMaxSize()
 
-        ) {
+    ) {
 
 
         Card (
@@ -54,41 +53,35 @@ fun Home1Screen(navController: NavController) {
 
 
 
-          Column (horizontalAlignment = Alignment.CenterHorizontally,
-              modifier = Modifier.fillMaxSize()){
-              Spacer(modifier = Modifier.height(10.dp))
+            Column (horizontalAlignment = Alignment.CenterHorizontally,
+                modifier = Modifier.fillMaxSize()){
+                Spacer(modifier = Modifier.height(10.dp))
 
-              Text(
-                  text ="PURCHASE",
-                  fontSize = 40.sp,
-                  fontWeight = FontWeight.SemiBold,
-                  color = Color.White,
+                Text(
+                    text ="DELIVERED",
+                    fontSize = 40.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    color = Color.White,
 
-                  )
+                    )
 
 
 
-              Text(
-                  text ="ONLINE",
-                  fontSize = 40.sp,
-                  fontWeight = FontWeight.SemiBold,
-                  color = Color.White,
 
-                  )
-              Text(
-                  text =" It also provides payment processing, shipping, and order management capabilities.",
-                  fontSize = 18.sp,
-                  modifier = Modifier.fillMaxWidth(),
-                  textAlign = TextAlign.Center,
-                  color = Color.White
+                Text(
+                    text ="  By embracing these innovations and overcoming current challenges, Kenya's e-commerce sector can unlock the full potential of last-mile delivery",
+                    fontSize = 18.sp,
+                    modifier = Modifier.fillMaxWidth(),
+                    textAlign = TextAlign.Center,
+                    color = Color.White
 
-              )
+                )
 
 
 
 
 
-          }
+            }
 
 
 
@@ -107,9 +100,7 @@ fun Home1Screen(navController: NavController) {
 
         }
 
-        Button(onClick = {
-            navController.navigate(ROUT_HOME2)
-        },
+        Button(onClick = {  },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(start = 20.dp, end = 20.dp)
@@ -139,7 +130,7 @@ fun Home1Screen(navController: NavController) {
 
 
 
-        }
+    }
 
 
 }
@@ -149,7 +140,9 @@ fun Home1Screen(navController: NavController) {
 
 @Composable
 @Preview(showBackground = true)
-fun Home1ScreenPreview(){
-    Home1Screen(rememberNavController() )
+fun Home3ScreenPreview(){
+    Home3Screen(rememberNavController() )
 
 }
+
+

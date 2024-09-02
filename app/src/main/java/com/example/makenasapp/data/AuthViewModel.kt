@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import com.example.makenasapp.models.User
+import com.example.makenasapp.navigation.ADD_PRODUCTS_URL
 import com.example.makenasapp.navigation.ROUT_HOME
 import com.example.makenasapp.navigation.ROUT_LOGIN
 import com.example.makenasapp.navigation.ROUT_SIGNUP
@@ -83,11 +84,11 @@ class AuthViewModel(var navController: NavController, var context: Context){
             Toast.makeText(context,"Please email and password cannot be blank", Toast.LENGTH_LONG).show()
         }
 
-        else if (email == "admin@gmail.com" && password == "123456"){
+        else if (email == "makena@gmail.com" && password == "123456"){
             mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener {
                 if (it.isSuccessful ){
                     Toast.makeText(this.context, "Success", Toast.LENGTH_SHORT).show()
-                    navController.navigate(ROUT_HOME)
+                    navController.navigate(ADD_PRODUCTS_URL)
                 }else{
                     Toast.makeText(this.context, "Error", Toast.LENGTH_SHORT).show()
                 }

@@ -35,9 +35,7 @@ class ProductViewModel(var navController: NavController, var context: Context) {
         val productId = System.currentTimeMillis().toString()
         val storageRef = FirebaseStorage.getInstance().getReference()
             .child("Products/$productId")
-        progress.show()
         storageRef.putFile(filePath).addOnCompleteListener{
-            progress.dismiss()
             if (it.isSuccessful){
                 // Save data to db
                 storageRef.downloadUrl.addOnSuccessListener {
@@ -63,7 +61,6 @@ class ProductViewModel(var navController: NavController, var context: Context) {
     fun allProducts(
         product: MutableState<Product>,
         products: SnapshotStateList<Product>):SnapshotStateList<Product>{
-        progress.show()
         var ref = FirebaseDatabase.getInstance().getReference()
             .child("Products")
         ref.addValueEventListener(object: ValueEventListener {
@@ -74,7 +71,6 @@ class ProductViewModel(var navController: NavController, var context: Context) {
                     product.value = retrievedProduct!!
                     products.add(retrievedProduct)
                 }
-                progress.dismiss()
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -83,6 +79,7 @@ class ProductViewModel(var navController: NavController, var context: Context) {
         })
         return products
     }
+
 
     fun updateProduct(productId:String){
         var ref = FirebaseDatabase.getInstance().getReference()
