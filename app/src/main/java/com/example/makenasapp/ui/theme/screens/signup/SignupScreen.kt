@@ -103,7 +103,7 @@ fun SignupScreen(navController: NavController){
 
 
                 Text(
-                    text ="The future of faahion",
+                    text ="The future of fashion",
                     fontSize = 20.sp,
                     color = Color.White,
 

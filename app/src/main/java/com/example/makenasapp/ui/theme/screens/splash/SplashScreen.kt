@@ -38,6 +38,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.makenasapp.R
 import com.example.makenasapp.navigation.ROUT_LOGIN
+import com.example.makenasapp.navigation.ROUT_MAIN
 import com.example.makenasapp.ui.theme.newRed
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -51,7 +52,7 @@ fun SplashScreen(navController: NavController){
         var coroutineScope = rememberCoroutineScope()
         coroutineScope.launch {
             delay(2000)
-            navController.navigate(ROUT_LOGIN)
+            navController.navigate(ROUT_MAIN)
         }
 
 
@@ -93,7 +94,7 @@ fun SplashScreen(navController: NavController){
 
 
               Text(
-                  text ="The future of faahion",
+                  text ="The future of fashion",
                   fontSize = 20.sp,
                   color = Color.White,
 
