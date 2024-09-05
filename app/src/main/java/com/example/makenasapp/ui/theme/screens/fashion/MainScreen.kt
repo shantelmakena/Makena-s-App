@@ -22,9 +22,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Color.Companion.Blue
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -53,14 +55,17 @@ fun MainScreen(navController: NavController){
         Image(painterResource(
             id = R.drawable.shopping2),
             contentDescription = "home",
-            modifier = Modifier.size(100.dp),
-            contentScale = ContentScale.Crop
+            modifier = Modifier.size(300.dp),
+            contentScale = ContentScale.Crop,
+
+
         )
 
         Spacer(modifier = Modifier.height(5.dp))
         Text(
             text = "Shop with us at a fair price",
-            fontSize = 18.sp
+            fontSize = 18.sp,
+            fontWeight = FontWeight.SemiBold
         )
         Spacer(modifier = Modifier.height(15.dp))
         Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
@@ -69,6 +74,8 @@ fun MainScreen(navController: NavController){
                 .fillMaxWidth()
                 .height(700.dp),
                 shape = RoundedCornerShape(topStart = 50.dp, topEnd = 50.dp),
+                colors = CardDefaults.cardColors(newRed1)
+
 
 
 

@@ -32,6 +32,8 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.makenasapp.R
+import com.example.makenasapp.navigation.ROUT_HOME3
+import com.example.makenasapp.navigation.ROUT_MAIN
 import com.example.makenasapp.ui.theme.newRed
 import com.example.makenasapp.ui.theme.screens.home.HomeScreen
 
@@ -100,7 +102,7 @@ fun Home3Screen(navController: NavController) {
 
         }
 
-        Button(onClick = {  },
+        Button(onClick = { navController.navigate(ROUT_MAIN) },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(start = 20.dp, end = 20.dp)
